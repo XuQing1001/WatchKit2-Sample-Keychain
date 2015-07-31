@@ -1,15 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8083.2"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKit2_Sample_Keychain_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="点击按钮进行操作：" numberOfLines="3" id="7hP-cU-Naa"/>
+                        <group width="1" alignment="left" verticalAlignment="bottom" layout="vertical" id="R8y-W3-OCJ">
+                            <items>
+                                <separator alignment="left" id="295-HA-3oJ"/>
+                                <group width="1" alignment="left" id="M7c-pL-IxO">
+                                    <items>
+                                        <button width="60" alignment="left" title="插入" id="q8H-f6-PSV">
+                                            <connections>
+                                                <action selector="add" destination="AgC-eL-Hgc" id="RLb-GE-2hm"/>
+                                            </connections>
+                                        </button>
+                                        <button width="60" alignment="left" title="删除" id="Si8-Mr-p34">
+                                            <connections>
+                                                <action selector="delete" destination="AgC-eL-Hgc" id="Gpa-c7-LzL"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="Hyc-Pr-le5">
+                                    <items>
+                                        <button width="60" alignment="left" title="检索" id="PwJ-gG-4u4">
+                                            <connections>
+                                                <action selector="load" destination="AgC-eL-Hgc" id="KHr-Wd-0He"/>
+                                            </connections>
+                                        </button>
+                                        <button width="60" alignment="left" title="更新" id="2EX-ir-YDp">
+                                            <connections>
+                                                <action selector="update" destination="AgC-eL-Hgc" id="Dni-gF-2a1"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="label" destination="7hP-cU-Naa" id="ejY-3j-QB1"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="139" y="374.5"/>
         </scene>
     </scenes>
 </document>
